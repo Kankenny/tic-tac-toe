@@ -12,21 +12,28 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<div class="board x" id="board">
-			<div class="cell x" data-cell></div>
-			<div class="cell circle" data-cell></div>
-			<div class="cell" data-cell></div>
-			<div class="cell circle" data-cell></div>
-			<div class="cell" data-cell></div>
-			<div class="cell" data-cell></div>
-			<div class="cell" data-cell></div>
-			<div class="cell" data-cell></div>
-			<div class="cell" data-cell></div>
+		<div class="content">
+			<h1 class="title">Tic-Tac-Toe</h1>
+			<div class="board" id="board">
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+				<div class="cell" data-cell></div>
+			</div>
 		</div>
 
-		<div class="winning-message">
-			<div data-winning-message-text></div>
+		<div class="winning-message" id="winningMessage">
+			<div data-winning-message-text>Winner</div>
 			<button id="restartButton">Restart</button>
 		</div>
+
+		<footer class="fixed-footer">
+			<h5>Design by: Kennette Basco</h5>
+		</footer>
 	</body>
 </html>
