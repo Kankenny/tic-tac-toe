@@ -24,6 +24,81 @@ body {
 	text-shadow: 3px 3px black;
 }
 
+.animate-character {
+	text-transform: uppercase;
+	background-image: linear-gradient(
+		90deg,
+		#cafd10 0%,
+		#00217c 29%,
+		#ff4a86 67%,
+		#750000 100%
+	);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 5s linear infinite;
+	display: inline-block;
+	font-size: 50rem;
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+svg {
+	display: block;
+	font: 10.5em 'Montserrat';
+	width: 960px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.text-copy {
+	fill: none;
+	stroke: white;
+	stroke-dasharray: 6% 29%;
+	stroke-width: 5px;
+	stroke-dashoffset: 0%;
+	animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+	stroke: #4d163d;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+	stroke: #438d34;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+	stroke: #d34ac1;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+	stroke: #bd0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+	stroke: #fdb731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+	100% {
+		stroke-dashoffset: -35%;
+	}
+}
+
 .content {
 	display: flex;
 	flex-direction: column;
@@ -40,7 +115,6 @@ body {
 	display: flex;
 	justify-content: center;
 	font-size: 6rem;
-	color: #fdda0d;
 }
 
 .board {
@@ -204,4 +278,62 @@ footer {
 	z-index: 1;
 	letter-spacing: 1.5px;
 	border: solid 1px black;
+	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+	100% {
+		transform: scale(1);
+	}
+}
+footer span {
+	display: inline-block;
+	opacity: 0;
+	filter: blur(4px);
+}
+
+span:nth-child(1) {
+	animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+	animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+	animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+	animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+	animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+	animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+	animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+	animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+	animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+	animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
 }
